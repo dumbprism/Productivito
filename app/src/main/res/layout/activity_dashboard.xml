@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1D1D1D"
+    tools:context=".DashboardPage">
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/cousine"
+        android:text="@string/welcome"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Dashboard Title -->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/cousine"
+        android:text="@string/dashboard"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- App Name Text -->
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/cousine"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/welcome"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <!-- LinearLayout for Buttons -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name">
+
+        <!-- Buttons with consistent height and padding -->
+        <Button
+            android:id="@+id/pomodoroButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#FFEB69"
+            android:padding="8dp"
+            android:text="@string/pomodoro"
+            android:fontFamily="@font/geist_mono"
+            android:textColor="#000"
+            app:cornerRadius="10sp" />
+
+        <Button
+            android:id="@+id/toDoButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:padding="8dp"
+            android:text="@string/toDo"
+            app:cornerRadius="10sp"
+            android:fontFamily="@font/geist_mono"
+            android:textColor="#000"
+            android:backgroundTint="#FFEB69"/>
+
+        <Button
+            android:id="@+id/habitTrackerButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:padding="8dp"
+            android:text="@string/habitTracker"
+            app:cornerRadius="10sp"
+            android:fontFamily="@font/geist_mono"
+            android:textColor="#000"
+            android:backgroundTint="#FFEB69"/>
+
+        <Button
+            android:id="@+id/dailyJournalButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:padding="8dp"
+            android:text="@string/dailyJournal"
+            app:cornerRadius="10sp"
+            android:fontFamily="@font/geist_mono"
+            android:textColor="#000"
+            android:backgroundTint="#FFEB69"/>
+
+        <Button
+            android:id="@+id/weeklyPlannerButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:padding="8dp"
+            android:text="@string/weeklyPlanner"
+            app:cornerRadius="10sp"
+            android:fontFamily="@font/geist_mono"
+            android:textColor="#000"
+            android:backgroundTint="#FFEB69"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="#1D1D1D"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    tools:ignore="UntaggedAttribute">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#1D1D1D">
+
+        <!-- Journal Title TextView -->
+        <TextView
+            android:id="@+id/journalTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title of Journal"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="@font/cousine" />
+
+        <!-- Journal Date TextView -->
+        <TextView
+            android:id="@+id/journalCreatedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/cousine"
+            android:layout_marginTop="8dp" />
+
+        <!-- Edit Button -->
+        <Button
+            android:id="@+id/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/blue"/>
+
+        <!-- Delete Button -->
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/red"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

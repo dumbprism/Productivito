@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">PRODUCTIVITO</string>
+    <string name="welcome_text">
+       Welcome to productivito
+    </string>
+    <string name="name_label">
+        Enter your name to get Started
+    </string>
+    <string name="input_name">Name</string>
+    <string name="get_started">Get Started</string>
+    <string name="welcome">Welcome,</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="pomodoro">POMODORO TIMER</string>
+    <string name="toDo">TO DO LIST</string>
+    <string name="habitTracker">HABIT TRACKER</string>
+    <string name="dailyJournal">DAILY JOURNAL</string>
+    <string name="weeklyPlanner">WEEKLY PLANNER</string>
+    <string name="pomodoro_content">
+        A Pomodoro timer is a tool used in the Pomodoro Technique, a time management method that involves working in 25-minute intervals with short breaks in between
+    </string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="restart">Restart</string>
+
+
+</resources>
