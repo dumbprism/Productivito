@@ -1,62 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    app:cardBackgroundColor="#1D1D1D"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="4dp"
-    tools:ignore="UntaggedAttribute">
+    android:background="#1D1D1D"
+    android:elevation="4dp">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:background="#1D1D1D">
+        android:padding="16dp">
 
-        <!-- Journal Title TextView -->
         <TextView
-            android:id="@+id/journalTitle"
+            android:id="@+id/textViewEntry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Title of Journal"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:fontFamily="@font/cousine" />
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"/>
 
-        <!-- Journal Date TextView -->
-        <TextView
-            android:id="@+id/journalCreatedAt"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Date"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:fontFamily="@font/cousine"
-            android:layout_marginTop="8dp" />
+            android:gravity="end">
 
-        <!-- Edit Button -->
-        <Button
-            android:id="@+id/editButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Edit"
-            android:textColor="@color/white"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="@color/blue"/>
+            <Button
+                android:id="@+id/buttonEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:layout_marginEnd="8dp"/>
 
-        <!-- Delete Button -->
-        <Button
-            android:id="@+id/deleteButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Delete"
-            android:textColor="@color/white"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="@color/red"/>
-
+            <Button
+                android:id="@+id/buttonDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"/>
+        </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

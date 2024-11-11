@@ -59,7 +59,7 @@ public class DashboardPage extends AppCompatActivity {
             startActivity(i);
         });
         dailyJournalButton.setOnClickListener(v -> {
-            Intent i = new Intent(DashboardPage.this,DailyjournalActivity.class);
+            Intent i = new Intent(DashboardPage.this,DailyJournal.class);
             startActivity(i);
         });
     }

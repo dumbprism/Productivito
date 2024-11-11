@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#1D1D1D">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily Journal"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:textColor="#FFF"/>
+
+    <!-- Add Entry Button -->
+    <Button
+        android:id="@+id/buttonAddEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Entry"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- RecyclerView for Journal Entries -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEntries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+

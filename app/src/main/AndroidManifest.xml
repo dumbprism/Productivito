@@ -13,13 +13,22 @@
         android:theme="@style/Theme.End_Sem_project"
         tools:targetApi="31">
         <activity
-            android:name=".DailyjournalActivity"
+            android:name=".UsageStatsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NewEntryActivity"
             android:exported="false" />
         <activity
             android:name=".DailyJournal"
             android:exported="false" />
         <activity
+            android:name=".JournalHomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".HabitTracker"
+            android:exported="false" />
+        <activity
+            android:name=".DailyjournalActivity"
             android:exported="false" />
         <activity
             android:name=".habitTracker"
