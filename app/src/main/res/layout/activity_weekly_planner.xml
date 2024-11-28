@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background">
+
+    <!-- Title of the Activity -->
+    <TextView
+        android:id="@+id/tv_weekly_planner_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weekly Planner"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:paddingBottom="8dp" />
+
+    <!-- Write-up about the Weekly Planner -->
+    <TextView
+        android:id="@+id/tv_weekly_planner_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Organize your tasks efficiently by assigning them to specific days of the week. Add tasks, view them grouped by days, and stay on top of your schedule!"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray" />
+
+    <!-- Spinner for Selecting Day -->
+    <Spinner
+        android:id="@+id/spinner_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="#CACACA"
+        android:entries="@array/days_of_week"
+        android:padding="8dp"
+        android:textColorHint="@android:color/white"
+        app:cardCornerRadius="10sp" />
+
+    <!-- Input for Adding Tasks -->
+    <EditText
+        android:id="@+id/et_task_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter task"
+        android:layout_marginBottom="8dp"
+        android:inputType="text"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:backgroundTint="@color/white"
+        android:padding="8dp" />
+
+    <!-- Add Task Button -->
+    <Button
+        android:id="@+id/btn_add_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Task"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@android:color/black" />
+
+    <!-- RecyclerView to Display Weekly Tasks -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_weekly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="8dp" />
+
+</LinearLayout>
+
+
+

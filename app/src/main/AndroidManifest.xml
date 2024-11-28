@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +15,12 @@
         android:theme="@style/Theme.End_Sem_project"
         tools:targetApi="31">
         <activity
+            android:name=".AppUsageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WeeklyPlannerActivity"
+            android:exported="false" />
+        <activity
             android:name=".UsageStatsActivity"
             android:exported="false" />
         <activity
@@ -22,16 +30,7 @@
             android:name=".DailyJournal"
             android:exported="false" />
         <activity
-            android:name=".JournalHomeActivity"
-            android:exported="false" />
-        <activity
             android:name=".HabitTracker"
-            android:exported="false" />
-        <activity
-            android:name=".DailyjournalActivity"
-            android:exported="false" />
-        <activity
-            android:name=".habitTracker"
             android:exported="false" />
         <activity
             android:name=".Todo"
@@ -48,10 +47,12 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
         </activity>
     </application>

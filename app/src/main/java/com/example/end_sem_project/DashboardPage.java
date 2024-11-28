@@ -14,9 +14,11 @@ import androidx.core.view.WindowInsetsCompat;
 public class DashboardPage extends AppCompatActivity {
     TextView name;
     Button pomodoroButton;
-    Button todoButton;// Declare the button here
+    Button todoButton;
     Button habitTrackerButton;
     Button dailyJournalButton;
+    Button weeklyPlannerButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,8 @@ public class DashboardPage extends AppCompatActivity {
         todoButton = findViewById(R.id.toDoButton);
        habitTrackerButton = findViewById(R.id.habitTrackerButton);
        dailyJournalButton = findViewById(R.id.dailyJournalButton);
+       weeklyPlannerButton = findViewById(R.id.weeklyPlannerButton);
+
 
         // Set the OnClickListener to open the Pomodoro activity
         pomodoroButton.setOnClickListener(v -> {
@@ -58,9 +62,16 @@ public class DashboardPage extends AppCompatActivity {
             Intent i = new Intent(DashboardPage.this,HabitTracker.class);
             startActivity(i);
         });
+
         dailyJournalButton.setOnClickListener(v -> {
             Intent i = new Intent(DashboardPage.this,DailyJournal.class);
             startActivity(i);
         });
+
+        weeklyPlannerButton.setOnClickListener(v -> {
+            Intent i = new Intent(DashboardPage.this,WeeklyPlannerActivity.class);
+            startActivity(i);
+        });
+
     }
 }

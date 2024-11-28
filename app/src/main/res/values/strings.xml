@@ -15,6 +15,7 @@
     <string name="habitTracker">HABIT TRACKER</string>
     <string name="dailyJournal">DAILY JOURNAL</string>
     <string name="weeklyPlanner">WEEKLY PLANNER</string>
+    <string name="priorityMatrix">PRIORITY MATRIX</string>
     <string name="pomodoro_content">
         A Pomodoro timer is a tool used in the Pomodoro Technique, a time management method that involves working in 25-minute intervals with short breaks in between
     </string>
@@ -31,6 +32,16 @@
     <string name="last_time_used_label">Last time used</string>
     <!-- label for usage time -->
     <string name="usage_time_label">Usage time</string>
+
+    <string-array name="days_of_week">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
 
 
 </resources>
