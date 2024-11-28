@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.Locale;
 
@@ -87,8 +88,13 @@ public class Todo extends AppCompatActivity {
             String description = descriptionInput.getText().toString();
 
             if (!taskName.isEmpty() && !priority.isEmpty() && !description.isEmpty()) {
-                // Add task to list and update UI
+                // Add task to list
                 taskList.add(new Task(taskName, priority, description));
+
+                // Sort the task list based on priority
+                sortTasksByPriority();
+
+                // Notify the adapter and update UI
                 taskAdapter.notifyDataSetChanged();
                 updateUI();
                 dialog.dismiss();
@@ -101,4 +107,8 @@ public class Todo extends AppCompatActivity {
         dialog.show();
     }
 
+    // Method to sort tasks by priority
+    private void sortTasksByPriority() {
+        Collections.sort(taskList, (task1, task2) -> Integer.compare(task2.getPriorityValue(), task1.getPriorityValue()));
+    }
 }

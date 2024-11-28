@@ -5,14 +5,12 @@ public class Task {
     private String priority;
     private String description;
 
-    // Constructor
     public Task(String name, String priority, String description) {
         this.name = name;
         this.priority = priority;
         this.description = description;
     }
 
-    // Getters
     public String getName() {
         return name;
     }
@@ -26,15 +24,29 @@ public class Task {
     }
 
     // Setters
-    public void setName(String name) {
-        this.name = name; // Sets the task name
+    public void setName(String taskName) {
+        this.name = taskName;
     }
 
     public void setPriority(String priority) {
-        this.priority = priority; // Sets the task priority
+        this.priority = priority;
     }
 
     public void setDescription(String description) {
-        this.description = description; // Sets the task description
+        this.description = description;
+    }
+
+    // Convert priority to an integer for sorting
+    public int getPriorityValue() {
+        switch (priority) {
+            case "High":
+                return 3;
+            case "Medium":
+                return 2;
+            case "Low":
+                return 1;
+            default:
+                return 0;
+        }
     }
 }
