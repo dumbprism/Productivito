@@ -5,8 +5,10 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -69,13 +71,19 @@ public class Todo extends AppCompatActivity {
         AlertDialog dialog = builder.create();
 
         EditText taskNameInput = dialogView.findViewById(R.id.taskNameInput);
-        EditText priorityInput = dialogView.findViewById(R.id.priorityInput);
+        Spinner prioritySpinner = dialogView.findViewById(R.id.prioritySpinner);
         EditText descriptionInput = dialogView.findViewById(R.id.descriptionInput);
         Button addTaskDialogButton = dialogView.findViewById(R.id.addTaskDialogButton);
 
+        // Set up the Spinner with values for priority
+        String[] priorities = {"High", "Medium", "Low"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, priorities);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        prioritySpinner.setAdapter(adapter);
+
         addTaskDialogButton.setOnClickListener(v -> {
             String taskName = taskNameInput.getText().toString();
-            String priority = priorityInput.getText().toString();
+            String priority = prioritySpinner.getSelectedItem().toString(); // Get selected priority
             String description = descriptionInput.getText().toString();
 
             if (!taskName.isEmpty() && !priority.isEmpty() && !description.isEmpty()) {
@@ -84,9 +92,13 @@ public class Todo extends AppCompatActivity {
                 taskAdapter.notifyDataSetChanged();
                 updateUI();
                 dialog.dismiss();
+            } else {
+                // Show a toast if any field is empty
+                Toast.makeText(this, "All fields must be filled", Toast.LENGTH_SHORT).show();
             }
         });
 
         dialog.show();
     }
+
 }

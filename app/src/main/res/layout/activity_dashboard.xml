@@ -126,17 +126,7 @@
             android:textColor="#000"
             android:backgroundTint="#FFEB69"/>
 
-        <Button
-            android:id="@+id/priorityMatrixButton"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginBottom="8dp"
-            android:padding="8dp"
-            android:text="@string/priorityMatrix"
-            app:cornerRadius="10sp"
-            android:fontFamily="@font/geist_mono"
-            android:textColor="#000"
-            android:backgroundTint="#FFEB69"/>
+
 
     </LinearLayout>
 
